@@ -1,0 +1,9 @@
+[submodule "lab-target"]
+	path = lab-target
+	url = git@github.com:scarv/lab-target.git
+[submodule "lab-acquire"]
+	path = lab-acquire
+	url = git@github.com:scarv/lab-acquire.git
+[submodule "lab-cloud"]
+	path = lab-cloud
+	url = git@github.com:scarv/lab-cloud.git
