@@ -132,13 +132,7 @@
   | `repo-spec`             | a  specification object for the repository identified by `repo-id`                                (e.g., including a git URL)                                                              |
   | `depo-id`               | an identifier    for or type of the depository into which the acquisition data set  is   uploaded (e.g., `s3` for an S3 bucket)                                                            |
   | `depo-spec`             | a  specification object for the depository identified by `depo-id`                                (e.g., including an S3 bucket identifier)                                                |
-  | `trace-period-id`       | an identifier    for or type of the trace period     specification                                (e.g., `auto` for automatic selection)                                                   |
-  | `trace-period-spec`     | a  specification         of the trace period                                                      (if needed, e.g., `1` for 1 second period)                                               |
-  | `trace-resolution-id`   | an identifier    for or type of the trace resolution specification                                (e.g., `auto` for automatic selection)                                                   |
-  | `trace-resolution-spec` | a  specification         of the trace resolution                                                  (if needed, e.g., `8` for 1 bit    resolution)                                           |
-  | `trace-count`           | the number of traces to acquire                                                                                                                                                            |
-  | `trace-format`          | the format of each acquired trace                                                                 (e.g., `pickle` for a compressed, serialised Python object via `pickle`)                 |
-  | `trace-crop`            | whether or not to crop each acquired trace to match the trigger signal                                                                                                                     |
+  | `trace-spec`            | a  specification object for the traces acquired                                                   (e.g., number, format)                                                                   |
 
 - The 
   target implementation 
