@@ -1,9 +1,4 @@
-# `lab.scarv.org`
-
-<!--- -------------------------------------------------------------------- --->
-
-[![Build Status](https://travis-ci.com/scarv/lab.scarv.org.svg)](https://travis-ci.com/scarv/lab.scarv.org)
-[![Documentation](https://codedocs.xyz/scarv/lab.scarv.org.svg)](https://codedocs.xyz/scarv/lab.scarv.org)
+# `lab.scarv.org`: "lab-free" side-channel analysis
 
 <!--- -------------------------------------------------------------------- --->
 
