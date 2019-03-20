@@ -7,6 +7,9 @@
 [submodule "lab-cloud"]
 	path = lab-cloud
 	url = git@github.com:scarv/lab-cloud.git
-[submodule "extern/texmf"]
-	path = extern/texmf
-	url = https://github.com/scarv/texmf.git
+[submodule "lab-analyse"]
+	path = lab-analyse
+	url = git@github.com:scarv/lab-analyse.git
+[submodule "lab-spec"]
+	path = lab-spec
+	url = ssh://git@github.com/scarv/lab-spec.git
