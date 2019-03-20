@@ -1,9 +1,0 @@
-sudo: required
-dist: cosmic
-before_install:
-- sudo apt-get -qq update 
-- sudo apt-get install -y --no-install-recommends texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra texlive-science
-- sudo apt-get install -y --no-install-recommends biber xzdec
-script:
-- source ./bin/conf.sh 
-- make clean doc
