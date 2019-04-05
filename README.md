@@ -119,6 +119,16 @@ these include
 
 ## Quickstart
 
+There is no natural quickstart process for `lab.scarv.org` as
+a whole; the best approach would be to
+
+- start
+  [`scarv/lab-spec`](https://github.com/scarv/lab-spec),
+  i.e., the specification and documentation,
+  then
+- investigate the other submodules, depending on the use-case
+  you have in mind.
+
 <!--- -------------------------------------------------------------------- --->
 
 ## Acknowledgements
