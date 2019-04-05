@@ -1,4 +1,4 @@
-# `lab.scarv.org`: "lab. free" side-channel analysis
+# `lab.scarv.org`: "side-channel analysis as a service"
 
 <!--- -------------------------------------------------------------------- --->
 
@@ -45,7 +45,7 @@ means they can still impact on how applicable the approach is.
 The `lab.scarv.org` project is intended as a suite of tools
 that, in combination, help to address such challenges.  The
 concept is simple: it aims to deliver a form of
-"side-channel analysis [as a service](https://en.wikipedia.org/wiki/As_a_service)]",
+"side-channel analysis [as a service](https://en.wikipedia.org/wiki/As_a_service)",
 in a sense virtualising the resources and processes required
 by locating them in the cloud and offering remote access via
 high-level APIs.  As a result, it has applications in a wide
