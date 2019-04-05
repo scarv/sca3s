@@ -22,31 +22,52 @@ platforms.*
 
 ## Overview
 
-The field of implementation attacks
-
-
-Although platforms such as
+Forming a sub-field of more general implementation attacks, a
+[side-channel attack](https://en.wikipedia.org/wiki/Side-channel_attack)
+on some cryptographic target demands (at least) two phases:
+a) acquisition of a data set,
+   then
+b) (crypt)analysis of said data set, which aims to satisfy a
+   goal such as key recovery.
+Particularly where the side-channel in question is
+*analogue* (e.g., power consumption)
+vs.
+ *digital* (e.g., execution time)
+in nature, the acquisition phase can present some significant
+practical challenges.  Examples include
+capital investment wrt. equipment, maintenance and operational experience, and logistics;
+even though low-cost platforms such as
 [ChipWhisperer](https://newae.com/tools/chipwhisperer)
+help to some extent, the concept of
+[Total Cost of Ownership (TCO)](https://en.wikipedia.org/wiki/Total_cost_of_ownership)
+means they can still impact on how applicable the approach is.
 
-research and development challenges in this field are often
-exaserbated by a range of practical problems:
+The `lab.scarv.org` project is intended as a suite of tools
+that, in combination, help to address such challenges.  The
+concept is simple: it aims to deliver a form of
+"side-channel analysis [as a service](https://en.wikipedia.org/wiki/As_a_service)]",
+in a sense virtualising the resources and processes required
+by locating them in the cloud and offering remote access via
+high-level APIs.  As a result, it has applications in a wide
+range of potential use-cases: examples include
 
-https://en.wikipedia.org/wiki/Total_cost_of_ownership
-
-capital investment, maintainence and operational experience, logistics\
-
-
-we view the result as helping to supporting core scientific
-tenets such as
-[open access](https://en.wikipedia.org/wiki/Open_access)
-and
-[reproducibility](https://en.wikipedia.org/wiki/Reproducibility).
-
-support use-cases such as forms of side-channel aware
-
-- [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration)
-- [build-it, break-it, fix-it](https://builditbreakit.org) 
-  contests
+- a side-channel oriented form of
+  [Continuous Integration (CI)](https://en.wikipedia.org/wiki/Continuous_integration),
+  potentially allowing small development teams to improve the
+  resilience of their cryptographic implementations,
+- shared use of bespoke or niche equipment, e.g., where some
+  cryptographic design or standardisation process requires a
+  forms of
+  [build-it, break-it, fix-it](https://builditbreakit.org) 
+  approach,
+- forms of
+  [CTF-like](https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security)
+  contest,
+- as a means of supporting scientific tenets such as
+  [open access](https://en.wikipedia.org/wiki/Open_access)
+  and
+  [reproducibility](https://en.wikipedia.org/wiki/Reproducibility)
+  wrt. research publications.
 
 <!--- -------------------------------------------------------------------- --->
 
