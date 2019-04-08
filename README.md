@@ -122,7 +122,7 @@ these include
 There is no natural quickstart process for `lab.scarv.org` as
 a whole; the best approach would be to
 
-- start
+- start by reading through
   [`scarv/lab-spec`](https://github.com/scarv/lab-spec),
   i.e., the specification and documentation,
   then
