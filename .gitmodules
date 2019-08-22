@@ -1,9 +1,0 @@
-[submodule "lab-spec"]
-	path = lab-spec
-	url = ssh://git@github.com/scarv/lab-spec.git
-[submodule "lab-target"]
-	path = lab-target
-	url = ssh://git@github.com:scarv/lab-target.git
-[submodule "lab-cloud"]
-	path = lab-cloud
-	url = ssh://git@github.com:scarv/lab-cloud.git
