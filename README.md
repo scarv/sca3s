@@ -8,8 +8,8 @@ project,
 SCA3S is a collection of resources that support the development 
 and analysis of cryptographic implementations wrt.
 [side-channel attack](https://en.wikipedia.org/wiki/Side-channel_attack):
-it places particular emphasis on analogue side-channels (e.g.,
-power and EM) stemming from
+mirroring the goals of SCARV, it places particular emphasis on analogue 
+side-channels (e.g., power and EM) stemming from
 [RISC-V](https://riscv.org)-based
 platforms.*
 
@@ -124,8 +124,16 @@ best approach would be to
 
 ## Acknowledgements
 
-This work has been supported in part by EPSRC via grant 
-[EP/R012288/1](https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/R012288/1),
-under the [RISE](http://www.ukrise.org) programme.
+This work has been supported in part 
+
+- by EPSRC via grant 
+  [EP/R012288/1](https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/R012288/1)
+  under the 
+  [RISE](https://www.ukrise.org) 
+  programme, 
+  and 
+- by the
+  [AWS Cloud Credits for Research](https://aws.amazon.com/research-credits)
+  programme.
 
 <!--- -------------------------------------------------------------------- --->
