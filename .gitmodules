@@ -1,0 +1,9 @@
+[submodule "sca3s-spec"]
+	path = sca3s-spec
+	url = git@github.com:scarv/sca3s-spec.git
+[submodule "sca3s-backend"]
+	path = sca3s-backend
+	url = git@github.com:scarv/sca3s-backend.git
+[submodule "sca3s-harness"]
+	path = sca3s-harness
+	url = git@github.com:scarv/sca3s-harness.git
