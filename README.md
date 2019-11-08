@@ -15,6 +15,27 @@ platforms.*
 
 <!--- -------------------------------------------------------------------- --->
 
+## Organisation
+
+```
+├── bin                     - scripts (e.g., environment configuration)
+├── build                   - working directory for build
+├── doc                     - documentation
+│   └── tex                   - LaTeX content
+├── extern                  - external resources (e.g., submodules)
+│   ├── sca3s-harness         - submodule: scarv/sca3s-harness
+│   ├── sca3s-backend         - submodule: scarv/sca3s-backend
+│   ├── texmf                 - submodule: scarv/texmf
+└── src
+    └── sca3s               - source code for SCA3S
+        └── spec            - source code for SCA3S specification
+            ├── acquire       - acquire-specific functionality
+            ├── analyse       - analyse-specific functionality
+            └── share         - shared           functionality
+```
+
+<!--- -------------------------------------------------------------------- --->
+
 ## Overview
 
 Forming a sub-field of more general implementation attacks, a
@@ -110,15 +131,37 @@ these include
 
 ## Quickstart
 
-There is no natural quickstart process for SCA3S as a whole; the 
-best approach would be to
+1. Install any associated pre-requisites, e.g.,
 
-- start by reading through
-  [`scarv/sca3s-spec`](https://github.com/scarv/sca3s-spec),
-  i.e., the specification and documentation,
-  then
-- investigate the other submodules, depending on the use-case
-  you have in mind.
+   - a modern 
+     [LaTeX](https://www.latex-project.org)
+     distributation,
+     such as
+     [TeX Live](https://www.tug.org/texlive),
+     including any required packages.
+
+2. Execute
+
+   ```sh
+   git clone https://github.com/scarv/sca3s.git
+   cd ./sca3s
+   git submodule update --init --recursive
+   source ./bin/conf.sh
+   ```
+
+   to clone and initialise the repository,
+   then configure the environment;
+   for example, you should find that the environment variable
+   `REPO_HOME`
+   is set appropriately.
+
+3. Use targets in the top-level `Makefile` to drive a set of
+   common tasks, e.g.,
+
+   | Command                  | Description
+   | :----------------------- | :----------------------------------------------------------------------------------- |
+   | `make doc`               | build the [Latex](https://www.latex-project.org)-based documentation                 |
+   | `make    clean`          | clean-up (e.g., remove everything built in `${REPO_HOME}/build`)                     |
 
 <!--- -------------------------------------------------------------------- --->
 
@@ -127,10 +170,7 @@ best approach would be to
 This work has been supported in part 
 
 - by EPSRC via grant 
-  [EP/R012288/1](https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/R012288/1)
-  under the 
-  [RISE](https://www.ukrise.org) 
-  programme, 
+  [EP/R012288/1](https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/R012288/1) (under the [RISE](https://www.ukrise.org) programme), 
   and 
 - by the
   [AWS Cloud Credits for Research](https://aws.amazon.com/research-credits)
