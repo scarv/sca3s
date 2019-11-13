@@ -22,16 +22,11 @@ platforms.*
 ├── build                   - working directory for build
 ├── doc                     - documentation
 │   └── tex                   - LaTeX content
-├── extern                  - external resources (e.g., submodules)
-│   ├── sca3s-harness         - submodule: scarv/sca3s-harness
-│   ├── sca3s-backend         - submodule: scarv/sca3s-backend
-│   ├── texmf                 - submodule: scarv/texmf
-└── src
-    └── sca3s               - source code for SCA3S
-        └── spec            - source code for SCA3S specification
-            ├── acquire       - acquire-specific functionality
-            ├── analyse       - analyse-specific functionality
-            └── share         - shared           functionality
+└── extern                  - external resources (e.g., submodules)
+    ├── sca3s-backend         - submodule: scarv/sca3s-backend
+    ├── sca3s-harness         - submodule: scarv/sca3s-harness
+    ├── sca3s-share           - submodule: scarv/sca3s-share
+    └── texmf                 - submodule: scarv/texmf
 ```
 
 <!--- -------------------------------------------------------------------- --->
