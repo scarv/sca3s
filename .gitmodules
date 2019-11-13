@@ -4,9 +4,9 @@
 [submodule "extern/sca3s-harness"]
 	path = extern/sca3s-harness
 	url = ssh://git@github.com/scarv/sca3s-harness.git
-[submodule "extern/texmf"]
-	path = extern/texmf
-	url = ssh://git@github.com/scarv/texmf.git
 [submodule "extern/sca3s-middleware"]
 	path = extern/sca3s-middleware
 	url = ssh://git@github.com/scarv/sca3s-middleware.git
+[submodule "extern/texmf"]
+	path = extern/texmf
+	url = ssh://git@github.com/scarv/texmf.git
