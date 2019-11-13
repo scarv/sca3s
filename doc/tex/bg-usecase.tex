@@ -1,0 +1,122 @@
+% =============================================================================
+
+\subsection{Potential use-cases}
+
+% -----------------------------------------------------------------------------
+
+\subsubsection{A mechanism to abstract the acquisition process}
+
+
+That said, however, a subset of practitioners legitimately focus on the
+latter alone.
+
+% scientific tenets such as open access and reproducibility demand
+%  the same equipment be used 
+
+% -----------------------------------------------------------------------------
+
+\subsubsection{A mechanism to manage logistical constraints}
+
+Managing shared access to (potentially bespoke or niche) equipment can be 
+difficult, especially so if issues of scale (e.g., the physical proximity, 
+and number of users) are evident.  As such, \SCAAASID {\em could} be viewed 
+simply as a framework that addresses the associated logistical challenge.
+
+Beyond this, however, various opportunities emerge from the remote use of
+shared equipment via \SCAAASID.  The concept of Continuous Integration (CI)
+is one example.  Traditional CI is a development best-practice, the core 
+tenet under which is for source code 
+a) to be regularly (e.g., several times a day) integrated into a central repository 
+   and, in doing so, 
+b) subjected to a suite of automated analysis processes, e.g., to verify completion of the build process.
+A central advantage of this approach is the early identification, and so
+resolution, of functional defects.  
+It is obviously attractive to consider security-focused instances of CI;
+various products, such as Veracode Greenlight\footnote{
+\url{https://www.veracode.com/products/greenlight}
+}, deliver this by focusing on security-specific defects in software.  A
+(small) step further would be to consider CI as applied to security from
+a side-channel perspective.  In essence, \SCAAASID offers a platform where 
+cryptographic implementations can, within an existing development workflow,
+be automatically analysed to identify side-channel related defects (e.g., 
+an above threshold level of generic leakage).
+We posit that offering this capability, particularly to small development
+teams, is an easy route to (incrementally) improving the global quality 
+of cryptographic implementations.
+
+% -----------------------------------------------------------------------------
+
+\subsubsection{A mechanism to support design or standardisation}
+
+Whether selecting new or codifying existing technologies, the development
+of cryptographic standards is a fundamentally important challenge.  Only 
+somewhat orthogonal to the development of {\em written} standards, is the 
+development of de facto standard {\em implementations}: these software 
+components form concrete, ubiquitous realisations of theory that fill 
+critical, long-lived roles.
+In both cases, open contests have emerged as an important approach (or a
+component thereof); by allowing open analysis and debate, they typically 
+enhance the quality of and trust in the eventual outcome.  Initiated in
+$1997$ and concluding in $2000$, the AES process~\cite{SCARV:Burr:03},
+led by NIST, is an obvious exemplar.  In fact, it encompassed elements of 
+{\em both} arguments above: ``hardware and software suitability'' was an 
+explicit evaluation criteria for the new block cipher design, plus the 
+process begat various de facto implementations that are still in use.
+
+To some extent, the same argument is true in more applied fields such as
+that of side-channel attacks.  For example, each iteration of the DPA 
+contest~\cite{SCARV:CDDEGGHKLLNOSSSSVWW:14} challenges participants to 
+mount an efficient attack against a target implementation based on use
+of pre-acquired data sets.  However, the open contest model implemented 
+by the DPA contest exhibits some arguable disadvantages.  In particular, 
+it is
+
+\begin{itemize}
+\item somewhat uni-directional, in the sense it has predominantly been 
+      used as a resource for comparing and refining attack techniques 
+      rather than secure implementations, 
+      and
+\item somewhat non-continuous: there is typically a contest outcome, 
+      with no interaction or iteration possible thereafter.
+\end{itemize}
+
+\noindent
+We posit that a build-it, break-it, fix-it~\cite{SCARV:RHPLMM:16} style 
+contest model, if it were possible, could address such disadvantages;
+\SCAAASID plausibly represents a mechanism that could support such a model.
+
+%@article{SCARV:CDDEGGHKLLNOSSSSVWW:14,
+%  author  = {C. Clavier and J.-L. Danger and G. Duc and M.A. Elaabid and B. G\'{e}rard and S. Guilley and A. Heuser and M. Kasper and Y. Li and V. Lomn\'{e} and D. Nakatsu and K. Ohta and K. Sakiyama and L. Sauvage and W. Schindler and M. St\"{o}ttinger and N. Veyrat-Charvillon and M. Walle and A. Wurcker},
+%  title   = {Practical improvements of side-channel attacks on {AES}: feedback from the 2nd {DPA} contest},
+%  journal = {Journal of Cryptographic Engineering},
+%  volume  = {4},
+%  number  = {4},
+%  pages   = {259--274},
+%  year    = {2014}
+%}
+%
+%@article{SCARV:Burr:03,
+%  author  = {W.E. Burr},
+%  title   = {Selecting the {Advanced} {Encryption} {Standard}},
+%  journal = {IEEE Security and Privacy},
+%  volume  = {1},
+%  number  = {2},
+%  pages   = {43--52},
+%  year    = {2003}
+%}
+%
+%@inproceedings{SCARV:RHPLMM:16,
+%  author    = {A. Ruef and M. Hicks and J. Parker and D. Levin and M.L. Mazurek and P. Mardziel},
+%  title     = {{Build It}, {Break It}, {Fix It}: Contesting Secure Development},
+%  booktitle = {CCS},
+%  year      = {2016},
+%  url       = {http://builditbreakit.org}
+%}
+
+% -----------------------------------------------------------------------------
+
+\subsubsection{A mechanism to support educational challenges}
+
+%educational infrastructure, e.g., forms of CTF-like contest
+
+% =============================================================================

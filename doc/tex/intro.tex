@@ -1,0 +1,180 @@
+% =============================================================================
+
+\paragraph{Implementation attacks}
+
+Among documents associated with the so-called Snowden revelations, the NSA 
+exploit catalogue is arguably the most concrete and illuminating.  Analysis
+of the content has led many commentators to remark on a lack of traditional
+cryptanalytic breakthroughs.  Put simply, and although interpreting various
+aspects at face value, the implication is that modern cryptography indeed
+offers the security margins expected.  The state of end-point security is, 
+however, {\em significantly} less positive in that similar security margins
+are either degraded or rendered moot by deficiencies in the implementation 
+of hardware, software, or a combination of both.  The increased emphasis on
+end-to-end security, while sane, makes this particularly problematic: the
+end-points, where security-critical storage and computation are paramount,
+also seem demonstrably {\em in}secure.
+
+A recurring exemplar is the potential for implementation attacks against a
+given target; the mechanism used to mount such an attack will intrinsically
+depend on the concrete implementation, and hence behaviour of said target,
+vs. an abstract design for example.
+The importance of implementation attacks can be motivated by observing that
+an given attacker might not behave as they {\em should} (i.e., as expected)
+but however they {\em can}.  To render ineffective the security afforded by
+some encryption scheme, for example, they might target
+a) the concrete, in practice implementation
+   {\em or}
+b) the abstract, on paper    design
+of said scheme.  Typically, they will select the option for which they can
+succeed most easily (colloquially, the weakest link).  If security of the
+scheme is (provably) related to some hard Mathematical problem, traditional
+cryptanalysis is unlikely to be easy at all.  Opting for an implementation
+attack, however, offers the potential to bypass the associated difficulty:
+the hard problem might be rendered moot if the attack instead focuses on a
+feature (e.g., flaw) in the implementation of it.
+
+% -----------------------------------------------------------------------------
+
+\paragraph{Side-channel   attacks}
+
+At a high level, implementation attacks fall into two sub-classes:
+
+\begin{enumerate}
+\item An active  attack
+      is st. the attacker influences behaviour of the target;
+      they leverage direct inputs and outputs plus (optionally) indirect  input,
+      and are typically described as 
+      fault
+      attacks.
+\item A  passive attack
+      is st. the attacker   observes behaviour of the target;
+      they leverage direct inputs and outputs plus (optionally) indirect output,
+      and are typically described as 
+      side-channel (or information leakage)
+      attacks.
+\end{enumerate}
+
+\noindent
+In the case of passive attacks, a given indirect output is referred to as
+a (or the) side-channel; said channel will act as a mechanism though which
+information leaks.  Although variants can make sense, typical side-channel
+attacks will involve two phases in some form:
+a) an acquisition    phase, 
+   where interaction with the attack target yields an associated data set
+   through observation of associated behaviour,
+   then
+b) a (crypt)analysis phase,
+   where data set is used satisfy a goal such as 
+    (generic) leakage assessment
+   or 
+   (specific) key recovery.
+As a motivating example, consider a power-based side-channel attack against
+a CMOS-based attack target.  Each interaction with the attack target would
+yield a trace of power consumption, i.e., a sequence of samples
+\[
+T = \LIST{ T_0, T_1, \ldots, T_{n-1} } ,
+\]
+which will be
+{\em design}-dependent
+(e.g., dependent on the number, type, and connection between transistors)
+plus
+{\em  data}-dependent
+(i.e., change based on switching activity of said transistors);
+the acquisition phase yields a set of such traces, each of which includes
+a signal (i.e., data of interest) plus noise, while the analysis phase is
+tasked with using that data set to satisfy the attack goal.
+
+Evolution of the state-of-the-art wrt. such phases are often described as
+symbiotic, and clearly {\em both} are integral to a concrete attack.  For
+example, an acquired data set with no means to cryptanalytically exploit
+it is somewhat redundant; likewise, improvement to the acquisition phase
+may be able to support more effective cryptanalysis (e.g., as a result of
+higher SNR).
+
+% -----------------------------------------------------------------------------
+
+\paragraph{Approaches to mitigation}
+
+In addition to the relative ineffectiveness of cryptanalysis against modern
+cryptographic designs, a variety of trends illustrate why concrete attacks
+based on these concepts are such a threat; a non-exhaustive set of examples
+follows.
+
+\begin{enumerate}
+
+\item There has been an obvious societal shift toward demand for, and even
+      dependency on digital information systems; such systems often process
+      security- and identity-related data, while also operating within an
+      adversarial environment.
+
+\item There is often significant potential for application at scale, which
+      typically amplifies the potency of attacks.  Examples include where
+      a) increased connectivity permits attacks to be mounted remotely via
+         a network (e.g., targeting a web-server),
+         or
+      b) a large number of similarly viable targets exist (e.g., massive
+         deployment of some embedded devices such as a smart-phone, or IoT
+         device).
+
+\item In   theory,
+      increased complexity   of      such targets
+      offers an intuitive deterrent against attack;
+      contact-based side-channels related to power consumption {\em may} be
+      rendered infeasible by electronic or architectural complexity.
+      In practice,
+      however, the ``attacks only get better'' principle is evident: use of
+      contact-less side-channels, such as EM, have been harnessed against
+      System-on-Chip (SoC) components, 
+      smart-phones,
+      and even
+      full-scale personal computers
+      operating at multi-gigahertz clock frequencies.
+
+\end{enumerate}
+
+% TODO
+
+\noindent
+As a result, it has been suggested that treating side-channels security as a
+first-class goal is
+a) {\em necessary},
+   and thus
+b) the {\em duty} of hardware security Engineers.
+
+Along such lines, robust mitigation of side-channel attacks is, on one hand,
+supported by a rich, mature corpus of literature; mitigation techniques (or
+countermeasures) are increasingly well understood.  On the other hand, the
+concrete vs. abstract nature of side-channel attacks fundamentally dictates
+challenges wrt. selecting, instrumenting, and assessing the efficacy of such
+mitigations.
+
+
+%Understanding attacks and associated mitigations demands 
+%
+%Particularly where the side-channel in question is
+%analogue (e.g., power consumption)
+%vs.
+% digital (e.g., execution time)
+%in nature, the first phase constitutes a challenge that can lli
+%
+%
+%Examples include
+%capital investment wrt. equipment, maintenance and operational experience, and logistics;
+%
+%even though low-cost platforms such as
+%[ChipWhisperer](https://newae.com/tools/chipwhisperer)
+%help to some extent, the concept of
+%[Total Cost of Ownership (TCO)](https://en.wikipedia.org/wiki/Total_cost_of_ownership)
+%means they can still impact on how applicable the approach is.
+
+ minimise total cost of ownership
+and hence maximise return on investment.
+
+% -----------------------------------------------------------------------------
+
+\paragraph{\SCAAASID: Side-Channel Analysis as a Service}
+
+% TODO
+
+% =============================================================================
