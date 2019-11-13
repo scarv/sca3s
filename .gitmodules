@@ -1,6 +1,3 @@
-[submodule "extern/sca3s-share"]
-	path = extern/sca3s-share
-	url = ssh://git@github.com/scarv/sca3s-share.git
 [submodule "extern/sca3s-backend"]
 	path = extern/sca3s-backend
 	url = ssh://git@github.com/scarv/sca3s-backend.git
@@ -10,3 +7,6 @@
 [submodule "extern/texmf"]
 	path = extern/texmf
 	url = ssh://git@github.com/scarv/texmf.git
+[submodule "extern/sca3s-middleware"]
+	path = extern/sca3s-middleware
+	url = ssh://git@github.com/scarv/sca3s-middleware.git

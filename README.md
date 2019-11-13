@@ -25,7 +25,7 @@ platforms.*
 └── extern                  - external resources (e.g., submodules)
     ├── sca3s-backend         - submodule: scarv/sca3s-backend
     ├── sca3s-harness         - submodule: scarv/sca3s-harness
-    ├── sca3s-share           - submodule: scarv/sca3s-share
+    ├── sca3s-middleware      - submodule: scarv/sca3s-middleware
     └── texmf                 - submodule: scarv/texmf
 ```
 
