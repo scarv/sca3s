@@ -2,7 +2,7 @@
 
 <!--- -------------------------------------------------------------------- --->
 
-*Acting as a component part of the
+*Acting as a component part of the wider
 [SCARV](https://www.scarv.org)
 project,
 SCA3S is a collection of resources that support the development 
@@ -12,22 +12,6 @@ mirroring the goals of SCARV, it places particular emphasis on analogue
 side-channels (e.g., power and EM) stemming from
 [RISC-V](https://riscv.org)-based
 platforms.*
-
-<!--- -------------------------------------------------------------------- --->
-
-## Organisation
-
-```
-├── bin                     - scripts (e.g., environment configuration)
-├── build                   - working directory for build
-├── doc                     - documentation
-│   └── tex                   - LaTeX content
-└── extern                  - external resources (e.g., submodules)
-    ├── sca3s-backend         - submodule: scarv/sca3s-backend
-    ├── sca3s-harness         - submodule: scarv/sca3s-harness
-    ├── sca3s-middleware      - submodule: scarv/sca3s-middleware
-    └── texmf                 - submodule: scarv/texmf
-```
 
 <!--- -------------------------------------------------------------------- --->
 
@@ -83,6 +67,18 @@ range of potential use-cases: examples include
 <!--- -------------------------------------------------------------------- --->
 
 ## Organisation
+
+```
+├── bin                     - scripts (e.g., environment configuration)
+├── build                   - working directory for build
+├── doc                     - documentation
+│   └── tex                   - LaTeX content
+└── extern                  - external resources (e.g., submodules)
+    ├── sca3s-backend         - submodule: scarv/sca3s-backend
+    ├── sca3s-harness         - submodule: scarv/sca3s-harness
+    ├── sca3s-middleware      - submodule: scarv/sca3s-middleware
+    └── texmf                 - submodule: scarv/texmf
+```
 
 Originally this repository housed *all* resources in one place,
 but to make them easier to manage, it *now* acts as a container: 
