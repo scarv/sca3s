@@ -37,9 +37,9 @@ help to some extent, the concept of
 [Total Cost of Ownership (TCO)](https://en.wikipedia.org/wiki/Total_cost_of_ownership)
 means they can still impact on how applicable the approach is.
 
-The SCA3S project is intended as a suite of tools that, in c
-ombination, help to address such challenges.  The concept is 
-simple: it aims to deliver a form of
+The SCA3S project is intended to act as a suite of tools that, 
+in combination, help to address such challenges.  The concept 
+is simple: it aims to deliver a form of
 "side-channel analysis [as a service](https://en.wikipedia.org/wiki/As_a_service)",
 in a sense virtualising the resources and processes required
 by locating them in the cloud and offering remote access via
@@ -80,10 +80,11 @@ range of potential use-cases: examples include
     └── texmf                 - submodule: scarv/texmf
 ```
 
-Originally this repository housed *all* resources in one place,
-but to make them easier to manage, it *now* acts as a container: 
-the resources are housed in dedicated submodules.  Specifically, 
-these include
+*Originally* this was a 
+[monorepo](https://en.wikipedia.org/wiki/Monorepo)
+that housed *all* resources in one place, but, to make them easier to 
+manage, it *now* acts as a container where each resource is housed in 
+dedicated submodule.  Specifically, these include:
 
 - [`scarv/sca3s-spec`](https://github.com/scarv/sca3s-spec)
   houses the
@@ -126,7 +127,7 @@ these include
 
    - a modern 
      [LaTeX](https://www.latex-project.org)
-     distributation,
+     distribution,
      such as
      [TeX Live](https://www.tug.org/texlive),
      including any required packages.
