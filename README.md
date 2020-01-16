@@ -86,15 +86,14 @@ that housed *all* resources in one place, but, to make them easier to
 manage, it *now* acts as a container where each resource is housed in 
 dedicated submodule.  Specifically, these include:
 
-- [`scarv/sca3s-spec`](https://github.com/scarv/sca3s-spec)
+- [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
   houses the
-  specification and documentation: we use this approach because 
-  it
-  a) offers an overarching perspective of,
-     and
-  b) deals more neatly with interaction between
-  the individual resources (vs. embedding it in said resources).
-- [`scarv/sca3s-target`](https://github.com/scarv/sca3s-target)
+  software portion of the acquisition appliance; in combination
+  with appropriate hardware, it allows generation data sets
+  (e.g., power consumption traces)
+  stemming from execution of a given target implementation.
+
+- [`scarv/sca3s-harness`](https://github.com/scarv/sca3s-harness)
   houses a
   framework for developing target implementations.  The idea is
   that users will fork the repository, which then supports a
@@ -102,22 +101,9 @@ dedicated submodule.  Specifically, these include:
      and
   b) build system for
   the target implementation then developed within it.
-- [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
+
+- [`scarv/sca3s-middleware`](https://github.com/scarv/sca3s-middleware)
   houses the
-  software portion of the acquisition appliance; in combination
-  with appropriate hardware, it allows generation data sets
-  (e.g., power consumption traces)
-  stemming from execution of a given target implementation.
-- [`scarv/sca3s-frontend`](https://github.com/scarv/sca3s-frontend)
-  houses the
-  cloud, or, more specifically
-  [AWS](https://en.wikipedia.org/wiki/Amazon_Web_Services)-based,
-  infrastructure which manages
-  a) user accounts and access control,
-  b) job submission and completion,
-  c) compute and storage allocation,
-  and so on: in essence this implements the high-level policy for
-  and orchestrates use of all *other* resources.
 
 <!--- -------------------------------------------------------------------- --->
 
@@ -152,8 +138,9 @@ dedicated submodule.  Specifically, these include:
 
    | Command                  | Description
    | :----------------------- | :----------------------------------------------------------------------------------- |
-   | `make doc`               | build the [Latex](https://www.latex-project.org)-based documentation                 |
-   | `make    clean`          | clean-up (e.g., remove everything built in `${REPO_HOME}/build`)                     |
+   | `make build-doc`         | build the [Latex](https://www.latex-project.org)-based documentation                 |
+   | `make clean-doc`         | clean the [Latex](https://www.latex-project.org)-based documentation                 |
+   | `make spotless`          | remove everything built in `${REPO_HOME}/build`                                      |
 
 <!--- -------------------------------------------------------------------- --->
 

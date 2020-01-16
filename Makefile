@@ -13,17 +13,12 @@ endif
 
 # =============================================================================
 
-.PHONY: doc
+%-doc :
+	@make --directory="${REPO_HOME}/doc" ${*}
 
-doc       :
-	@${MAKE} -C ${REPO_HOME}/doc all
+# -----------------------------------------------------------------------------
 
-doc-clean : 
-	@${MAKE} -C ${REPO_HOME}/doc clean
-
-all   : doc
-
-clean : doc-clean
+spotless :
 	@rm --force --recursive ${REPO_HOME}/build/*
 
 # =============================================================================
