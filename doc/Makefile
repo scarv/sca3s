@@ -16,7 +16,7 @@ dir   :
 	@mkdir --parents ${BUILD}
 	@mkdir --parents ${BUILD}/image
 
-all   : dir ${BUILD}/spec.pdf
+build : dir ${BUILD}/spec.pdf
 
 clean :
 	@rm -rf ${BUILD}
