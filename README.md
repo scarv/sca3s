@@ -75,9 +75,11 @@ range of potential use-cases: examples include
 │   └── tex                   - LaTeX content
 └── extern                  - external resources (e.g., submodules)
     ├── sca3s-backend         - submodule: scarv/sca3s-backend
+    ├── sca3s-demo            - submodule: scarv/sca3s-demo
     ├── sca3s-harness         - submodule: scarv/sca3s-harness
     ├── sca3s-middleware      - submodule: scarv/sca3s-middleware
-    └── texmf                 - submodule: scarv/texmf
+    ├── texmf                 - submodule: scarv/texmf
+    └── wiki                  - submodule: scarv/sca3s.wiki
 ```
 
 *Originally* this was a 
@@ -85,13 +87,6 @@ range of potential use-cases: examples include
 that housed *all* resources in one place, but, to make them easier to 
 manage, it *now* acts as a container where each resource is housed in 
 dedicated submodule.  Specifically, these include:
-
-- [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
-  houses the
-  software portion of the acquisition appliance; in combination
-  with appropriate hardware, it allows generation data sets
-  (e.g., power consumption traces)
-  stemming from execution of a given target implementation.
 
 - [`scarv/sca3s-harness`](https://github.com/scarv/sca3s-harness)
   houses a
@@ -102,8 +97,24 @@ dedicated submodule.  Specifically, these include:
   b) build system for
   the target implementation then developed within it.
 
-- [`scarv/sca3s-middleware`](https://github.com/scarv/sca3s-middleware)
+- [`scarv/sca3s-demo`](https://github.com/scarv/sca3s-demo)
+  houses a
+  demonstration (or example) instance of
+  [`scarv/sca3s-harness`](https://github.com/scarv/sca3s-harness),
+  and, more specifically, a basic AES implementation within the
+  associated framework.
+
+- [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
   houses the
+  software portion of the acquisition appliance; in combination
+  with appropriate hardware, it allows generation data sets
+  (e.g., power consumption traces)
+  stemming from execution of a given target implementation.
+
+- [`scarv/sca3s-middleware`](https://github.com/scarv/sca3s-middleware)
+  houses various
+  shared components, e.g., allowing consistent interfaces between 
+  the frontend and backend.
 
 <!--- -------------------------------------------------------------------- --->
 
@@ -121,7 +132,7 @@ dedicated submodule.  Specifically, these include:
 2. Execute
 
    ```sh
-   git clone https://github.com/scarv/sca3s.git
+   git clone https://github.com/scarv/sca3s.git ./sca3s
    cd ./sca3s
    git submodule update --init --recursive
    source ./bin/conf.sh
@@ -136,11 +147,23 @@ dedicated submodule.  Specifically, these include:
 3. Use targets in the top-level `Makefile` to drive a set of
    common tasks, e.g.,
 
-   | Command                  | Description
-   | :----------------------- | :----------------------------------------------------------------------------------- |
-   | `make build-doc`         | build the [Latex](https://www.latex-project.org)-based documentation                 |
-   | `make clean-doc`         | clean the [Latex](https://www.latex-project.org)-based documentation                 |
-   | `make spotless`          | remove everything built in `${REPO_HOME}/build`                                      |
+   | Command                   | Description                                                                          |
+   | :------------------------ | :----------------------------------------------------------------------------------- |
+   | `make build-doc`          | build the [Latex](https://www.latex-project.org)-based documentation                 |
+   | `make spotless`           | remove *everything* built in `${REPO_HOME}/build`                                    |
+
+<!--- -------------------------------------------------------------------- --->
+
+## Questions?
+
+- use the
+  [groups.io](https://groups.io)-based [discussion group](https://scarv.groups.io/g/sca3s),
+- raise an
+  [issue](https://github.com/scarv/sca3s/issues),
+- raise a
+  [pull request](https://github.com/scarv/sca3s/pulls),
+- drop us an 
+  [email](mailto:info@scarv.org?subject=sca3s).
 
 <!--- -------------------------------------------------------------------- --->
 
