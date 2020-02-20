@@ -69,17 +69,16 @@ range of potential use-cases: examples include
 ## Organisation
 
 ```
-├── bin                     - scripts (e.g., environment configuration)
-├── build                   - working directory for build
-├── doc                     - documentation
-│   └── tex                   - LaTeX content
-└── extern                  - external resources (e.g., submodules)
-    ├── sca3s-backend         - submodule: scarv/sca3s-backend
-    ├── sca3s-demo            - submodule: scarv/sca3s-demo
-    ├── sca3s-harness         - submodule: scarv/sca3s-harness
-    ├── sca3s-middleware      - submodule: scarv/sca3s-middleware
-    ├── texmf                 - submodule: scarv/texmf
-    └── wiki                  - submodule: scarv/sca3s.wiki
+├── bin                    - scripts (e.g., environment configuration)
+├── build                  - working directory for build
+├── doc                    - documentation
+└── extern                 - external resources (e.g., submodules)
+    ├── sca3s-backend        - submodule: scarv/sca3s-backend
+    ├── sca3s-demo           - submodule: scarv/sca3s-demo
+    ├── sca3s-harness        - submodule: scarv/sca3s-harness
+    ├── sca3s-middleware     - submodule: scarv/sca3s-middleware
+    ├── texmf                - submodule: scarv/texmf
+    └── wiki                 - submodule: scarv/sca3s.wiki
 ```
 
 *Originally* this was a 
@@ -106,6 +105,19 @@ dedicated submodule.  Specifically, these include:
 
 - [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
   houses the
+  software portion of the acquisition appliance; in combination
+  with appropriate hardware, it allows generation data sets
+  (e.g., power consumption traces)
+  stemming from execution of a given target implementation.
+
+- `scarv/sca3s-frontend`
+  houses the
+  cloud-based, specifically
+  [AWS](https://aws.amazon.com)_-based,
+  infrastructure that provides all the user-facing functionality
+  accessible via
+  [`sca3s.scarv.org`](https://sca3s.scarv.org).
+
   software portion of the acquisition appliance; in combination
   with appropriate hardware, it allows generation data sets
   (e.g., power consumption traces)
