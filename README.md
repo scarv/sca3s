@@ -130,7 +130,7 @@ dedicated submodule.  Specifically, these include:
 
 <!--- -------------------------------------------------------------------- --->
 
-## Quickstart
+## Quickstart (with more detail in the [wiki](https://github.com/scarv/sca3s/wiki))
 
 1. Install any associated pre-requisites, e.g.,
 
@@ -168,8 +168,8 @@ dedicated submodule.  Specifically, these include:
 
 ## Questions?
 
-- use the
-  [groups.io](https://groups.io)-based [discussion group](https://scarv.groups.io/g/sca3s),
+- read the
+  [wiki](https://github.com/scarv/sca3s/wiki),
 - raise an
   [issue](https://github.com/scarv/sca3s/issues),
 - raise a
