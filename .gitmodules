@@ -1,18 +1,18 @@
 [submodule "extern/sca3s-backend"]
 	path = extern/sca3s-backend
-	url = https://git@github.com/scarv/sca3s-backend.git
+	url = https://github.com/scarv/sca3s-backend.git
 [submodule "extern/sca3s-harness"]
 	path = extern/sca3s-harness
-	url = https://git@github.com/scarv/sca3s-harness.git
+	url = https://github.com/scarv/sca3s-harness.git
 [submodule "extern/sca3s-middleware"]
 	path = extern/sca3s-middleware
-	url = https://git@github.com/scarv/sca3s-middleware.git
+	url = https://github.com/scarv/sca3s-middleware.git
 [submodule "extern/texmf"]
 	path = extern/texmf
-	url = https://git@github.com/scarv/texmf.git
+	url = https://github.com/scarv/texmf.git
 [submodule "extern/sca3s-demo"]
 	path = extern/sca3s-demo
-	url = https://git@github.com/scarv/sca3s-demo.git
+	url = https://github.com/scarv/sca3s-demo.git
 [submodule "extern/wiki"]
 	path = extern/wiki
-	url = https://git@github.com/scarv/sca3s.wiki.git
+	url = https://github.com/scarv/sca3s.wiki.git
