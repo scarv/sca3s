@@ -1,4 +1,4 @@
-# SCA3S: Side-Channel Analysis as a Service
+# SCA3S: "side-channel analysis as a service"
 
 <!--- -------------------------------------------------------------------- --->
 
@@ -8,7 +8,12 @@ project,
 SCA3S is a collection of resources that support the development 
 and analysis of cryptographic implementations wrt.
 [side-channel attack](https://en.wikipedia.org/wiki/Side-channel_attack):
-mirroring the goals of SCARV, it places particular emphasis on analogue 
+SCA3A is, more specifically, pitched as offering
+"side-channel analysis as a service":
+it allows users to acquire and analyse side-channel data-sets which stem 
+from execution of their implementation, without (necessarily) owning or 
+operating the associated infrastructure.
+Mirroring the goals of SCARV, it places particular emphasis on analogue 
 side-channels (e.g., power and EM) stemming from
 [RISC-V](https://riscv.org)-based
 platforms.*
