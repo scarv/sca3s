@@ -1,13 +1,79 @@
-\documentclass{article}
+\documentclass[crop={true},border={0.2cm}]{standalone}
 
+\usepackage{hyperref}
+\usepackage{pxfonts}
 \usepackage{tikz}
+\usepackage{xargs}
+
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{shapes}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.multipart}
+
+\hypersetup{pdftex,pdflang={en-GB},colorlinks={true},bookmarks={false},urlcolor={red}}
+\newcommandx{\CIRCLED}[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\newlength{\SEP}\setlength{\SEP}{0.2cm}
+
+% =============================================================================
 
 \begin{document}
+\begin{tikzpicture}
 
-\begin{center}
-\begin{tikzpicture}[>=stealth]
-\node {this is a test} ;
+\tikzstyle{component}=[rectangle split,rectangle split parts={2},rectangle split ignore empty parts={false},rectangle split empty part height={2.0cm},minimum width={9.0cm},text height={2.0ex},align={center}]
+\tikzstyle{network}=[cloud,cloud ignores aspect,minimum width={8.0cm},minimum height={5.5cm}]
+
+% components: network
+
+\node [draw,network] (N) {Internet} ;
+
+% components: nodes
+
+\node at ([shift={(-2.0cm,+0.0cm)}] N.west)  [draw,anchor={east}, component] (C0) {\nodepart{text} \href{https://github.com}{\tt github.com}} ;
+\node at ([shift={(+2.0cm,+0.0cm)}] N.east)  [draw,anchor={west}, component] (C1) {\nodepart{text} \href{https://github.com/scarv/sca3s-frontend}{\tt scarv/sca3s-frontend}} ;
+\node at ([shift={(+0.0cm,-2.0cm)}] N.south) [draw,anchor={north},component] (C2) {\nodepart{text} \href{https://github.com/scarv/sca3s-backend }{\tt scarv/sca3s-backend}} ;
+\node at ([shift={(+0.0cm,+2.0cm)}] N.north) [draw,anchor={south},component] (C3) {\nodepart{text} user} ;
+
+% components: repositories
+
+\node at ([shift={(+0.5cm,-0.3cm)}] C0.west) [draw,rectangle,anchor={west},minimum width={3.0cm},minimum height={1.0cm}] (R0) {\href{https://github.com/scarv/sca3s-harness}{\tt scarv/sca3s-harness}} ;
+\node at ([shift={(-0.5cm,-0.3cm)}] C0.east) [draw,rectangle,anchor={east},minimum width={3.0cm},minimum height={1.0cm}] (R1) {\nolinkurl{${USER}/sca3s-harness}} ;
+\node at ([shift={(-0.5cm,-0.3cm)}] C3.east) [draw,rectangle,anchor={east},minimum width={3.0cm},minimum height={1.0cm}] (R2) {\nolinkurl{${USER}/sca3s-harness}} ;
+
+% components: board and scope
+
+\node at ([shift={(+0.0cm,-1.5cm)}] C2.south west) [draw,rectangle,anchor={north west},minimum width={3.0cm},minimum height={1.0cm}] (B) {\raisebox{-0.0em}{board}} ;
+\node at ([shift={(+0.0cm,-1.5cm)}] C2.south east) [draw,rectangle,anchor={north east},minimum width={3.0cm},minimum height={1.0cm}] (S) {\raisebox{-1.0em}{scope}} ;
+
+% connections: network 
+
+\draw [{ Stealth[open]-Stealth[open]},line width={2pt},gray,decorate,decoration={snake,pre length={0.5cm},post length={0.5cm}}] (C0.east)  -- (N.west)  ;
+\draw [{ Stealth[open]-Stealth[open]},line width={2pt},gray,decorate,decoration={snake,pre length={0.5cm},post length={0.5cm}}] (C1.west)  -- (N.east)  ;
+\draw [{ Stealth[open]-Stealth[open]},line width={2pt},gray,decorate,decoration={snake,pre length={0.5cm},post length={0.5cm}}] (C2.north) -- (N.south) ;
+\draw [{ Stealth[open]-Stealth[open]},line width={2pt},gray,decorate,decoration={snake,pre length={0.5cm},post length={0.5cm}}] (C3.south) -- (N.north) ;
+
+% connections: workflow 
+
+\draw [{ Stealth[open]-             },line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{1}}                 ~ create            user repository      }}}] (C0.135) to [bend left={45}] (C3.165) ;
+\draw [{              -Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{2}}                 ~ clone             user repository      }}}] (C0.90)  to [bend left={45}] (C3.180) ;
+\draw [{ Stealth[open]-            },line width={2pt},        postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{5}}                 ~ commit            target implementation}}}] (C0.45)  to [bend left={45}] (C3.195) ;
+\draw [{              -Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{3} $+$ \CIRCLED{4}} ~ develop and build target implementation}}}] (C3.140) to [loop,out={110},in={70},looseness=4] (C3.40) ;
+\draw [{ Stealth[open]-Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{6}}                 ~ use               target implementation}}}] (C3.0)   to [bend left={45}] (C1.90) ;
+
+\draw [{-Stealth[open]              },line width={2pt},dashed,postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={clone repository}}}] (C2.180) to [bend left={45}] (C0.270) ;
+\draw [{              -Stealth[open]},line width={2pt},dashed,postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={dispatch job    }}}] (C1.270) to [bend left={45}] (C2.0)   ;
+
+% connections: board and scope
+
+\draw [{ Stealth[open]-Stealth[open]},line width={2pt}] (B.north) -- (B.north |- C2.south) ;
+\draw [{ Stealth[open]-Stealth[open]},line width={2pt}] (S.north) -- (S.north |- C2.south) ;
+
+\draw [{-Stealth[open]},line width={2pt}] (B.10)  -- node [midway,above] {trigger} (B.10  -| S.west) ;
+\draw [{-Stealth[open]},line width={2pt}] (B.350) -- node [midway,below] {signal}  (B.350 -| S.west) ;
+
 \end{tikzpicture}
-\end{center}
-
 \end{document}
+
+% =============================================================================
