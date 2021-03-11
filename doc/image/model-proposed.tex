@@ -31,10 +31,10 @@
 
 % components: nodes
 
-\node at ([shift={(-2.0cm,+0.0cm)}] N.west)  [draw,anchor={east}, component] (C0) {\nodepart{text} \href{https://github.com}{\tt github.com}} ;
-\node at ([shift={(+2.0cm,+0.0cm)}] N.east)  [draw,anchor={west}, component] (C1) {\nodepart{text} \href{https://github.com/scarv/sca3s-frontend}{\tt scarv/sca3s-frontend}} ;
-\node at ([shift={(+0.0cm,-2.0cm)}] N.south) [draw,anchor={north},component] (C2) {\nodepart{text} \href{https://github.com/scarv/sca3s-backend }{\tt scarv/sca3s-backend}} ;
-\node at ([shift={(+0.0cm,+2.0cm)}] N.north) [draw,anchor={south},component] (C3) {\nodepart{text} user workstation} ;
+\node at ([shift={(-2.5cm,+0.0cm)}] N.west)  [draw,anchor={east}, component] (C0) {\nodepart{text} \href{https://github.com}{\tt github.com}} ;
+\node at ([shift={(+2.5cm,+0.0cm)}] N.east)  [draw,anchor={west}, component] (C1) {\nodepart{text} \href{https://github.com/scarv/sca3s-frontend}{\tt scarv/sca3s-frontend}} ;
+\node at ([shift={(+0.0cm,-2.5cm)}] N.south) [draw,anchor={north},component] (C2) {\nodepart{text} \href{https://github.com/scarv/sca3s-backend }{\tt scarv/sca3s-backend}} ;
+\node at ([shift={(+0.0cm,+2.5cm)}] N.north) [draw,anchor={south},component] (C3) {\nodepart{text} user workstation} ;
 
 % components: repositories
 
@@ -56,14 +56,15 @@
 
 % connections: workflow 
 
-\draw [{ Stealth[open]-             },line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{1}}                 ~ create            user repository      }}}] (C0.135) to [bend left={45}] (C3.165) ;
-\draw [{              -Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{2}}                 ~ clone             user repository      }}}] (C0.90)  to [bend left={45}] (C3.180) ;
-\draw [{ Stealth[open]-            },line width={2pt},        postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{5}}                 ~ commit            target implementation}}}] (C0.45)  to [bend left={45}] (C3.195) ;
-\draw [{              -Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{3} $+$ \CIRCLED{4}} ~ develop and build target implementation}}}] (C3.140) to [loop,out={110},in={70},looseness=4] (C3.40) ;
-\draw [{ Stealth[open]-Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{6}}                 ~ use               target implementation}}}] (C3.0)   to [bend left={45}] (C1.90) ;
+\draw [{             -Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{1}}                 ~ enroll                                 }}}] (C3.15)  to [bend left={45}] (C1.45)  ;
+\draw [{Stealth[open]-             },line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{2}}                 ~ create            user repository      }}}] (C0.135) to [bend left={45}] (C3.165) ;
+\draw [{             -Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{3}}                 ~ clone             user repository      }}}] (C0.90)  to [bend left={45}] (C3.180) ;
+\draw [{Stealth[open]-             },line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{6} $+$ \CIRCLED{7}} ~ commit            target implementation}}}] (C0.45)  to [bend left={45}] (C3.195) ;
+\draw [{             -Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{4} $+$ \CIRCLED{5}} ~ develop and build target implementation}}}] (C3.140) to [loop,out={110},in={70},looseness=4] (C3.40) ;
+\draw [{Stealth[open]-Stealth[open]},line width={2pt},       postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={{\CIRCLED{7}}                 ~ use               target implementation}}}] (C3.345) to [bend left={45}] (C1.135) ;
 
-\draw [{-Stealth[open]              },line width={2pt},dashed,postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={clone repository}}}] (C2.180) to [bend left={45}] (C0.270) ;
-\draw [{              -Stealth[open]},line width={2pt},dashed,postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={dispatch job    }}}] (C1.270) to [bend left={45}] (C2.0)   ;
+\draw [{Stealth[open]-             },line width={2pt},dashed,postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={clone repository}}}] (C2.180) to [bend left={45}] (C0.270) ;
+\draw [{             -Stealth[open]},line width={2pt},dashed,postaction={decorate,decoration={text along path,text align={center},raise={0.4cm},text={dispatch job    }}}] (C1.270) to [bend left={45}] (C2.0)   ;
 
 % connections: board and scope
 
