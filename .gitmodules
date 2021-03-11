@@ -1,6 +1,9 @@
 [submodule "extern/sca3s-backend"]
 	path = extern/sca3s-backend
 	url = https://github.com/scarv/sca3s-backend.git
+[submodule "extern/sca3s-example"]
+	path = extern/sca3s-example
+	url = https://github.com/scarv/sca3s-example.git
 [submodule "extern/sca3s-harness"]
 	path = extern/sca3s-harness
 	url = https://github.com/scarv/sca3s-harness.git

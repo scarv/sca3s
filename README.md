@@ -79,7 +79,7 @@ range of potential use-cases: examples include
 ├── doc                    - documentation
 └── extern                 - external resources (e.g., submodules)
     ├── sca3s-backend        - submodule: scarv/sca3s-backend
-    ├── sca3s-demo           - submodule: scarv/sca3s-demo
+    ├── sca3s-example        - submodule: scarv/sca3s-example
     ├── sca3s-harness        - submodule: scarv/sca3s-harness
     ├── sca3s-middleware     - submodule: scarv/sca3s-middleware
     ├── texmf                - submodule: scarv/texmf
@@ -101,12 +101,13 @@ dedicated submodule.  Specifically, these include:
   b) build system for
   the target implementation then developed within it.
 
-- [`scarv/sca3s-demo`](https://github.com/scarv/sca3s-demo)
-  houses a
-  demonstration (or example) instance of
+- [`scarv/sca3s-example`](https://github.com/scarv/sca3s-example)
+  houses an 
+  example (or demonstration) instance of
   [`scarv/sca3s-harness`](https://github.com/scarv/sca3s-harness),
-  and, more specifically, a basic AES implementation within the
-  associated framework.
+  and, more specifically, a basic 
+  [AES-128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+  implementation within the associated framework.
 
 - [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
   houses the
