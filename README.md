@@ -138,37 +138,55 @@ dedicated submodule.  Specifically, these include:
 
 ## Quickstart (with more detail in the [wiki](https://github.com/scarv/sca3s/wiki))
 
-1. Install any associated pre-requisites, e.g.,
+Given the role as a container, you don't really *use* this repository in
+the same way as some others.  Rather, various forms of documentation are
+the most natural route to getting started:
 
-   - a modern 
-     [LaTeX](https://www.latex-project.org)
-     distribution,
-     such as
-     [TeX Live](https://www.tug.org/texlive),
-     including any required packages.
+- From a user-facing perspective, the harness repository is the central
+  resource: almost everything else relates to either the front- and/or 
+  back-end infrastructure.
+  The associated
+  [wiki](https://github.com/scarv/sca3s-harness/wiki)
+  contains a step-by-step workflow for using it, and so SCA3S more generally.
 
-2. Execute
+- This repository houses some system-wide documentation:
 
-   ```sh
-   git clone https://github.com/scarv/sca3s.git ./sca3s
-   cd ./sca3s
-   git submodule update --init --recursive
-   source ./bin/conf.sh
-   ```
-
-   to clone and initialise the repository,
-   then configure the environment;
-   for example, you should find that the environment variable
-   `REPO_HOME`
-   is set appropriately.
-
-3. Use targets in the top-level `Makefile` to drive a set of
-   common tasks, e.g.,
-
-   | Command                   | Description                                                                          |
-   | :------------------------ | :----------------------------------------------------------------------------------- |
-   | `make build-doc`          | build the [LaTeX](https://www.latex-project.org)-based documentation                 |
-   | `make spotless`           | remove *everything* built in `${REPO_HOME}/build`                                    |
+  1. Install any associated pre-requisites, e.g.,
+  
+     - a modern 
+       [LaTeX](https://www.latex-project.org)
+       distribution,
+       such as
+       [TeX Live](https://www.tug.org/texlive),
+       including any required packages.
+  
+  2. Execute
+  
+     ```sh
+     git clone https://github.com/scarv/sca3s.git ./sca3s
+     cd ./sca3s
+     git submodule update --init --recursive
+     source ./bin/conf.sh
+     ```
+  
+     to clone and initialise the repository,
+     then configure the environment;
+     for example, you should find that the environment variable
+     `REPO_HOME`
+     is set appropriately.
+  
+  3. Use targets in the top-level `Makefile` to drive a set of
+     common tasks, e.g.,
+  
+     | Command                   | Description                                                                          |
+     | :------------------------ | :----------------------------------------------------------------------------------- |
+     | `make build-doc`          | build the [LaTeX](https://www.latex-project.org)-based documentation                 |
+     | `make spotless`           | remove *everything* built in `${REPO_HOME}/build`                                    |
+  
+- We maintain some 
+  [Postman](https://www.postman.com)-based 
+  [API documentation](https://documenter.getpostman.com/view/2245984/SzfCV6Nk)
+  for the front-end infrastructure.
 
 <!--- -------------------------------------------------------------------- --->
 
