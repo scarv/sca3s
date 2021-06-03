@@ -142,9 +142,10 @@ Given the role as a container, you don't really *use* this repository in
 the same way as some others.  Rather, various forms of documentation are
 the most natural route to getting started:
 
-- From a user-facing perspective, the harness repository is the central
-  resource: almost everything else relates to either the front- and/or 
-  back-end infrastructure.
+- From a user-facing perspective, the 
+  [harness repository](https://github.com/scarv/sca3s-harness)
+  is the central resource: almost everything else relates to either the front- 
+  and/or back-end infrastructure.
   The associated
   [wiki](https://github.com/scarv/sca3s-harness/wiki)
   contains a step-by-step workflow for using it, and so SCA3S more generally.
@@ -199,7 +200,7 @@ the most natural route to getting started:
 - raise a
   [pull request](https://github.com/scarv/sca3s/pulls),
 - drop us an 
-  [email](mailto:info@scarv.org?subject=sca3s).
+  [email](mailto:sca3s@scarv.org).
 
 <!--- -------------------------------------------------------------------- --->
 
