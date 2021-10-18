@@ -119,7 +119,7 @@ dedicated submodule.  Specifically, these include:
 - `scarv/sca3s-frontend`
   houses the
   cloud-based, specifically
-  [AWS](https://aws.amazon.com)_-based,
+  [AWS](https://aws.amazon.com)-based,
   infrastructure that provides all the user-facing functionality
   accessible via
   [`sca3s.scarv.org`](https://sca3s.scarv.org).
