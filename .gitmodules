@@ -16,3 +16,6 @@
 [submodule "extern/wiki"]
 	path = extern/wiki
 	url = https://github.com/scarv/sca3s.wiki.git
+[submodule "extern/sca3s-nist"]
+	path = extern/sca3s-nist
+	url = https://github.com/scarv/sca3s-nist.git

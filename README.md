@@ -82,6 +82,7 @@ range of potential use-cases: examples include
     ├── sca3s-example        - submodule: scarv/sca3s-example
     ├── sca3s-harness        - submodule: scarv/sca3s-harness
     ├── sca3s-middleware     - submodule: scarv/sca3s-middleware
+    ├── sca3s-nist           - submodule: scarv/sca3s-nist
     ├── texmf                - submodule: scarv/texmf
     └── wiki                 - submodule: scarv/sca3s.wiki
 ```
@@ -100,14 +101,24 @@ dedicated submodule.  Specifically, these include:
      and
   b) build system for
   the target implementation then developed within it.
+  There are also some in-house, forked instances of this repository:
 
-- [`scarv/sca3s-example`](https://github.com/scarv/sca3s-example)
-  houses an 
-  example (or demonstration) instance of
-  [`scarv/sca3s-harness`](https://github.com/scarv/sca3s-harness),
-  and, more specifically, a basic 
-  [AES-128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-  implementation within the associated framework.
+  - [`scarv/sca3s-example`](https://github.com/scarv/sca3s-example)
+    houses
+    generic examples use for demonstration purposes, including
+    e.g.,
+    a basic 
+    [AES-128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+    implementation.
+  - [`scarv/sca3s-nist`](https://github.com/scarv/sca3s-nist)
+    houses
+    specific examples related to various 
+    [NIST](https://www.nist.gov)-run standardisation processes,
+    e.g.,
+    those for
+    [AES](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/archived-crypto-projects/aes-development)
+    and
+    [LWC](https://csrc.nist.gov/projects/lightweight-cryptography).
 
 - [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
   houses the
