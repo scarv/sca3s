@@ -82,7 +82,7 @@ range of potential use-cases: examples include
     ├── sca3s-example        - submodule: scarv/sca3s-example
     ├── sca3s-harness        - submodule: scarv/sca3s-harness
     ├── sca3s-middleware     - submodule: scarv/sca3s-middleware
-    ├── sca3s-nist           - submodule: scarv/sca3s-nist
+    ├── sca3s-cli            - submodule: scarv/sca3s-cli
     ├── texmf                - submodule: scarv/texmf
     └── wiki                 - submodule: scarv/sca3s.wiki
 ```
@@ -101,24 +101,15 @@ dedicated submodule.  Specifically, these include:
      and
   b) build system for
   the target implementation then developed within it.
-  There are also some in-house, forked instances of this repository:
 
-  - [`scarv/sca3s-example`](https://github.com/scarv/sca3s-example)
-    houses
-    generic examples use for demonstration purposes, including
-    e.g.,
-    a basic 
-    [AES-128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-    implementation.
-  - [`scarv/sca3s-nist`](https://github.com/scarv/sca3s-nist)
-    houses
-    specific examples related to various 
-    [NIST](https://www.nist.gov)-run standardisation processes,
-    e.g.,
-    those for
-    [AES](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines/archived-crypto-projects/aes-development)
-    and
-    [LWC](https://csrc.nist.gov/projects/lightweight-cryptography).
+- [`scarv/sca3s-example`](https://github.com/scarv/sca3s-example)
+  houses a
+  forked instance of
+  [`scarv/sca3s-harness`](https://github.com/scarv/sca3s-harness),
+  acting as an example for demonstration purposes: it includes, e.g.,
+  a basic 
+  [AES-128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+  implementation.
 
 - [`scarv/sca3s-backend`](https://github.com/scarv/sca3s-backend)
   houses the
@@ -132,7 +123,7 @@ dedicated submodule.  Specifically, these include:
   cloud-based, specifically
   [AWS](https://aws.amazon.com)-based,
   infrastructure that provides all the user-facing functionality
-  accessible via
+  accessible via the web-based UI at
   [`sca3s.scarv.org`](https://sca3s.scarv.org).
 
   software portion of the acquisition appliance; in combination
@@ -144,6 +135,12 @@ dedicated submodule.  Specifically, these include:
   houses various
   shared components, e.g., allowing consistent interfaces between 
   the frontend and backend.
+
+- [`scarv/sca3s-cli`](https://github.com/scarv/sca3s-cli)
+  houses a
+  [CLI](https://en.wikipedia.org/wiki/Command-line_interface) which 
+  allows interaction with the front-end infrastructure without using 
+  the web-based UI, e.g., as part of a scripted build process.
 
 <!--- -------------------------------------------------------------------- --->
 
